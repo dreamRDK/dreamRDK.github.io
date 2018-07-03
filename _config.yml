@@ -9,8 +9,9 @@ baseurl: ''
 
 # Navigation links
 nav:
-  home: '/'
-  tags: '/tags.html'
+  主页: '/'
+  分类: '/tags.html'
+  关于:'/about.html'
 
 # Footer
 footer:
