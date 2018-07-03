@@ -1,4 +1,5 @@
-## 谢谢[kaeyleo](https://github.com/kaeyleo)
+## 谢谢
+[kaeyleo](https://github.com/kaeyleo)
 
 #### 感谢参与代码贡献的伙伴
 
