@@ -9,7 +9,7 @@ baseurl: ''
 
 # Navigation links
 nav:
-  home: '/'
+  主页: '/'
   tags: '/tags.html'
 
 # Footer
