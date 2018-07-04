@@ -24,24 +24,24 @@ tags: java 设计模式  单例模式
 缺点：没有采用延迟加载，如果一直未使用会造成内存浪费。
 
 ```java
-	 public class Singleton {
+  public class Singleton {
 
-        private final static Singleton INSTANCE = new Singleton();
+      private final static Singleton INSTANCE = new Singleton();
 
-        private Singleton(){}
+      private Singleton() {}
 
-        public static Singleton getInstance(){
-            return INSTANCE;
-        }
-    }
-
+      public static Singleton getInstance() {
+          return INSTANCE;
+      }
+  }
+```
 
    
 
 ### 2\. 饿汉式(静态代码块)
 
 优缺点同上，只是将实例化的操作放在了静态代码块中
-
+```java
     public class Singleton {
 
       private static Singleton instance;
@@ -55,12 +55,12 @@ tags: java 设计模式  单例模式
       public Singleton getInstance() {
         return instance;
       }
-
+```
 ### 3.懒汉模式(线程不安全)
 
 优点:延迟加载,只能用于单线程  
 缺点:多线程下,线程不安全可能出现多个实例
-
+```java
     public class Singleton {
 
       private static Singleton instance;
@@ -73,12 +73,12 @@ tags: java 设计模式  单例模式
         }
         return instance;
     }
-
+```
 ### 4.懒汉模式（线程安全，同步方法）
 
 优点：增加sycronized关键字，线程同步  
 缺点：效率太低
-
+```java
     public class Singleton {
 
         private static Singleton singleton;
@@ -92,11 +92,11 @@ tags: java 设计模式  单例模式
             return singleton;
         }
     }
-
+```
 ### 5.双重检查（推荐使用）
 
 优点：线程安全，延迟加载，效率高。执行两次if（singleton==null），在实例化时保证线程安全，第二次调用会直接返回实例，不执行同步代码块了，效率提升。
-
+```java
     public class Singleton {
 
         private static volatile Singleton singleton;
@@ -114,11 +114,11 @@ tags: java 设计模式  单例模式
             return singleton;
         }
     }
-
+```
 ### 6\. 静态内部类（推荐）
 
 优点：静态内部类方式在Singleton类被装载时并不会立即实例化，而是在需要实例化时，调用getInstance方法，才会装载SingletonInstance类，从而完成Singleton的实例化。避免了线程不安全，延迟加载，效率高。
-
+```java
     public class Singleton {
 
         private Singleton() {}
@@ -131,12 +131,13 @@ tags: java 设计模式  单例模式
             return SingletonInstance.INSTANCE;
         }
     }
-
+```
 ### 7.枚举（推荐）
-
+```java
     public enum Singleton {
         INSTANCE;
         public void whateverMethod() {
 
         }
     }
+```
