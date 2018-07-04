@@ -55,6 +55,13 @@ header-img: http://wx1.sinaimg.cn/large/c2842b1fly1fsy7f5x7c1j21kw0buwf9.jpg
     </div>
 
     <aside class="g-sidebar-wrapper">
+         {% if site.search %}
+        <div class="search-card">
+            <input id="search_input" type="text" placeholder="Search..." autocomplete="off">
+            <i class="iconfont icon-search"></i>
+            <div class="search_result"></div>
+        </div>
+        {% endif %}
         <div class="g-sidebar">
             <section class="author-card">
                 <div class="avatar">
@@ -89,13 +96,7 @@ header-img: http://wx1.sinaimg.cn/large/c2842b1fly1fsy7f5x7c1j21kw0buwf9.jpg
             {% endif %}
         </div>
 
-        {% if site.search %}
-        <div class="search-card">
-            <input id="search_input" type="text" placeholder="Search..." autocomplete="off">
-            <i class="iconfont icon-search"></i>
-            <div class="search_result"></div>
-        </div>
-        {% endif %}
+       
 
     </aside>
 
