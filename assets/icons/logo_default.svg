@@ -5,10 +5,10 @@
 
  <g>
   <title>background</title>
-  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <rect fill="none" id="canvas_background" height="69" width="101" y="-1" x="-1"/>
  </g>
  <g>
   <title>Layer 1</title>
-  <text font-weight="bold" stroke="#000" transform="matrix(1.7747291879048344,0,0,2.1703498128208256,-27.653526326620707,1.4891405844766386) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_2" y="23.463636" x="17.904332" stroke-width="0" fill="#DDDDDD">RDK</text>
+  <text stroke="#000" transform="matrix(1.8004229909416836,0,0,2.7134852565031546,-35.113625607984545,-24.36129954074723) " font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_2" y="30.5" x="21" stroke-opacity="null" stroke-width="0" fill="#DDDDDD">RDK</text>
  </g>
 </svg>

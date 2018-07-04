@@ -2,13 +2,18 @@
  <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
  <title>Combined Shape</title>
  <desc>Created with Sketch.</desc>
-
+ <defs>
+  <linearGradient id="linearGradient-1" y2="0%" x2="0%" y1="100%" x1="100%">
+   <stop offset="0%" stop-color="#0089FF"/>
+   <stop offset="100%" stop-color="#02DEF2"/>
+  </linearGradient>
+ </defs>
  <g>
   <title>background</title>
-  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <rect fill="none" id="canvas_background" height="69" width="101" y="-1" x="-1"/>
  </g>
  <g>
   <title>Layer 1</title>
-  <text font-weight="bold" stroke="#000" transform="matrix(1.7747291879048344,0,0,2.1703498128208256,-27.653526326620707,1.4891405844766386) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_2" y="23.463636" x="17.904332" stroke-width="0" fill="#7AD6CA">RDK</text>
+  <text stroke="#000" transform="matrix(1.8004229909416836,0,0,2.7134852565031546,-35.113625607984545,-24.36129954074723) " font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_2" y="30.5" x="21" stroke-opacity="null" stroke-width="0" fill="url(#linearGradient-1)">RDK</text>
  </g>
 </svg>
