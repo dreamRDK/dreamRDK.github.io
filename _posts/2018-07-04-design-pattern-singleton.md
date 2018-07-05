@@ -4,7 +4,7 @@ title: '设计模式之单例模式'
 subtitle: '单例模式简介及实现方式'
 date: 2018-07-04
 categories: 技术
-tags: java 设计模式  单例模式
+tags: java 设计模式
 ---
 
 ## 1.单例模式的概念思路

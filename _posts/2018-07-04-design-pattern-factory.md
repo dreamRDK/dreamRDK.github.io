@@ -4,7 +4,7 @@ title: '设计模式之工厂模式'
 subtitle: '工厂模式简介及实现方式'
 date: 2018-07-04
 categories: 技术
-tags: java 设计模式 工厂模式
+tags: java 设计模式
 ---
 
 # 1. 基本概念
