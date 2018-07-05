@@ -1,10 +1,10 @@
 ---
 layout: post
 title: 'kafka入门使用'
-subtitle:'kafka安装教程及在spring boot中的使用'
+subtitle: 'kafka安装教程及在spring boot中的使用'
 date: 2018-07-05
 categories: 技术
-tags:java kafka
+tags: java kafka
 ---
 
 ## 1.kafka简介
