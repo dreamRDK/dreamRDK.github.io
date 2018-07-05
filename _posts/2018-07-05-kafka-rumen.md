@@ -46,16 +46,16 @@ kafka 中的发布-订阅模式消费者是以组为单位订阅服务的，同�
 可以从官网下载:[https://kafka.apache.org/downloads](https://kafka.apache.org/downloads)
 
 命令下载：
-```
+```java
 wget http://mirrors.shuosc.org/apache/kafka/1.0.0/kafka_2.11-1.0.0.tgz
 ```
 找个地方解压：
-```
+```java
 tar -zxvf kafka_2.11-1.0.0.tgz
 ```
 解压文件夹中有个 config 文件夹，里面有相关配置文件。
 可以修改 kafka-server 的配置文件
-```
+```java
 broker.id=1
 log.dir=自己定义一个地址
 ```
@@ -63,16 +63,16 @@ log.dir=自己定义一个地址
 
 #### 1. 启动zookeeper
 
-```
+```java
  bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
 ```
 #### 2. 启动kafka
 
-```
+```java
 bin/kafka-server-start.sh  config/server.properties
 ```
 后台启动方式
-```
+```java
 bin/kafka-server-start.sh  config/server.properties 1>/dev/null 2>&1 &
 ```
 ## 3.kafka常用命令
@@ -80,28 +80,28 @@ bin/kafka-server-start.sh  config/server.properties 1>/dev/null 2>&1 &
 ### 创建 topic
 
 创建 topic 主题
-```
+```java
  bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 ```
 查看 topic 列表
-```
+```java
 bin/kafka-topics.sh --list --zookeeper localhost:2181
 ```
 ### 发送消息
 
-```
+```java
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
 ```
 ### 消费消息
 
 接收消息并打印
-```
+```java
 bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-beginning
 ``` 
 
 ### 查看 topic 描述信息
 
-```
+```java
 bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic test
 ```
 
@@ -173,7 +173,7 @@ public class KafkaReceiver {
 ```
 ### 5.配置文件
 
-```
+```java
 #============== kafka ===================
 # 指定kafka 代理地址，可以多个
 spring.kafka.bootstrap-servers=192.168.153.135:9092
