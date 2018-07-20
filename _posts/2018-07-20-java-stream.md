@@ -81,13 +81,13 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 
 我们先来看 map。如果你熟悉 scala 这类函数式语言，对这个方法应该很了解，它的作用就是把 input Stream 的每一个元素，映射成 output Stream 的另外一个元素。
 
-'''java
+```java
 `List<``String``> output = wordList.stream().`
 
 `map(String::toUpperCase).`
 
 `collect(Collectors.toList());`
-'''
+```
 
 这段代码把所有的单词转换为大写。
 
