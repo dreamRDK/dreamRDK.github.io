@@ -6,7 +6,7 @@ date: 2018-07-20
 categories: 技术
 tags: java 
 ---
-[[toc]]
+
 ## 1. Streams API 简介
 
 Stream 相当于一个高级版本的迭代器，但与迭代器不同的是，Stream 可以进行并行化操作，迭代器只能命令式地 串行化操作。使用Stream 可以更加高效地处理数据。
@@ -16,7 +16,7 @@ Stream 相当于一个高级版本的迭代器，但与迭代器不同的是，S
 获取一个数据源（source）→ 数据转换→执行操作获取想要的结果
 
 
->  生成流的方式
+>  **生成流的方式**
 
 1. 从 Collection 和数组
 
@@ -41,7 +41,7 @@ Stream 相当于一个高级版本的迭代器，但与迭代器不同的是，S
 * Pattern.splitAsStream(java.lang.CharSequence)
 * JarFile.stream()
 
-> 流的操作类型
+> **流的操作类型**
 
 * Intermediate
 
@@ -81,12 +81,13 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 
 我们先来看 map。如果你熟悉 scala 这类函数式语言，对这个方法应该很了解，它的作用就是把 input Stream 的每一个元素，映射成 output Stream 的另外一个元素。
 
-
+'''java
 `List<``String``> output = wordList.stream().`
 
 `map(String::toUpperCase).`
 
 `collect(Collectors.toList());`
+'''
 
 这段代码把所有的单词转换为大写。
 
