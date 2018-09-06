@@ -4,7 +4,7 @@ title: 'springboot集成webService发布服务'
 subtitle: '使用cxf发布webService'
 date: 2018-08-22
 categories: 技术
-tags: database
+tags: springboot webService
 ---
 ## 1. 添加依赖
 

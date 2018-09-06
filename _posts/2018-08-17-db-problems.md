@@ -35,3 +35,14 @@ IFNULL(字段名，替换值)
 > oracle
 NVL (字段名，替换值)
 
+## 4.时区查询
+> mysql
+show VARIABLES like '%time_zone%'
+> oracle
+select dbtimezone from dual
+## 5.连接字符串
+> mysql
+concat('%','字符串','%')
+> oracle
+concat(concat('%', '字符串'), '%') 
+
