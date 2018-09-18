@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '《Effective Java》读书笔记 01 '
+title: 'Effective Java 读书笔记 01'
 subtitle: '创建和销毁对象'
 date: 2018-09-09
 categories: 技术
