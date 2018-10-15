@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 'Effective Java 读书笔记 01'
+title: 'EffectiveJava读书笔记-01'
 subtitle: '创建和销毁对象'
 date: 2018-09-09
 categories: 技术
-tags:EffectiveJava
+tags: EffectiveJava
 ---
 ## 1. 用静态工厂方法代替构造器
 
