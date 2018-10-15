@@ -4,7 +4,7 @@ title: 'EffectiveJava读书笔记-02'
 subtitle: '对象通用方法'
 date: 2018-09-09
 categories: 技术
-tags:EffectiveJava
+tags: EffectiveJava
 ---
 ## 1. 覆盖 equals 方法的通用约定
 > 以下情形可以不覆盖 equals 方法
