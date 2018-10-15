@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Effective Java 读书笔记 02'
+title: 'EffectiveJava读书笔记-02'
 subtitle: '对象通用方法'
 date: 2018-09-09
 categories: 技术
