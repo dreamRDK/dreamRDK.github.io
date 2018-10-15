@@ -2,7 +2,7 @@
 layout: post
 title: 'EffectiveJava读书笔记-02'
 subtitle: '对象通用方法'
-date: 2018-09-09
+date: 2018-09-12
 categories: 技术
 tags: EffectiveJava
 ---
