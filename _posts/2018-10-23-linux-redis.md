@@ -8,41 +8,50 @@ tags: linux redis
 ---
 ## linux下安装redis步骤及遇到的坑
 ### 1. redis官网下载最新redis并上传到服务器
-	redis 官网下载地址https://redis.io/download
+```java
+redis 官网下载地址https://redis.io/download
+```
 ### 2. 解压安装包
 ### 3. 进入redis目录下使用make命令编译
 	这时可能没有gcc会报错
 ### 4.安装gcc
-	yum -y install gcc
-	验证gcc是否安装成功
-	rpm -qa|grep gcc
+```java
+yum -y install gcc
+验证gcc是否安装成功
+rpm -qa|grep gcc
+```
 	
 ### 5.继续 make redis
 	这时还是会报错，jemalloc 找不到
-	这是一个管理内存的库，可以从github下载压缩包上传
-	github地址https://github.com/jemalloc/jemalloc/releases
-	压缩包是bz2格式
-	所以先要安装gzip2包
-	yum install -y bzip2
-	
-	然后使用 tar -xjvf 命令解压
-	
+	这是一个管理内存的库，可以从github下载压缩包，解压
+```java
+github地址https://github.com/jemalloc/jemalloc/releases
+```
 	预编译jemalloc
-	./configure --prefix=/usr/local/jemalloc
+```java
+./configure --prefix=/usr/local/jemalloc
+```
 	然后编译 jemalloc
-	 make && make install
-	 查看 目录ll /usr/local/jemalloc/
+```java
+make && make install
+```
 ### 5.回到redis目录继续编译
-	make MALLOC=/usr/local/jemalloc/lib
+```java
+make MALLOC=/usr/local/jemalloc/lib
+```
 	
 ### 6.继续redis安装
-	cd src
-	make install PREFIX=/usr/local/redis-5.0.0/
+```java
+cd src
+make install PREFIX=/usr/local/redis-5.0.0/
+```
 	
 ### 7.make test
 	然后会报错，需要安装tcl
-	yum -y install tcl
-	
+```java
+yum -y install tcl
+```	
+
 ## redis 启动
 	复制redis.conf文件到/usr/local/redis-5.0.0/bin
 	修改redis.conf 配置
@@ -61,11 +70,15 @@ appendonly yes
 logfile "/app/log/redis.log"
 
 启动redis
+```java
 cd /usr/local/redis-5.0.0/bin
 ./redis-server redis.conf
+```
 
 启动客户端测试
+```java
 ./redis-cli 
+```
 
 ## 使用脚本设置开机自启动
 
@@ -130,11 +143,12 @@ case "$1" in
 esac
 ```
 
-将启动脚本复制到/etc/init.d目录下，本例将启动脚本命名为redisd（通常都以d结尾表示是后台自启动服务）
-进入/etc/init.d目录下设置为开机自启动，直接配置开启自启动 chkconfig redisd-6379 on
-
-可以使用 service redis-6379 start 启动redis
-service redis-6379 stop 停止redis
+将启动脚本复制到/etc/init.d目录下，本例将启动脚本命名为redis（通常都以d结尾表示是后台自启动服务）
+进入/etc/init.d目录下设置为开机自启动，直接配置开启自启动 chkconfig redis on
+如果是ubuntu系统使用以下命令
+update-rc.d redis defaults
+可以使用 service redis start 启动redis
+service redis stop 停止redis
 
 
 	
