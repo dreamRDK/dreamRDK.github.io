@@ -7,14 +7,20 @@ categories: 技术
 tags: linux redis
 ---
 ## linux下安装redis步骤及遇到的坑
+
 ### 1. redis官网下载最新redis并上传到服务器
+
 ```java
 redis 官网下载地址https://redis.io/download
 ```
+
 ### 2. 解压安装包
+
 ### 3. 进入redis目录下使用make命令编译
 	这时可能没有gcc会报错
+	
 ### 4.安装gcc
+
 ```java
 yum -y install gcc
 验证gcc是否安装成功
@@ -22,37 +28,48 @@ rpm -qa|grep gcc
 ```
 	
 ### 5.继续 make redis
+
 	这时还是会报错，jemalloc 找不到
 	这是一个管理内存的库，可以从github下载压缩包，解压
+	
 ```java
 github地址https://github.com/jemalloc/jemalloc/releases
 ```
+
 	预编译jemalloc
+	
 ```java
 ./configure --prefix=/usr/local/jemalloc
 ```
+
 	然后编译 jemalloc
+	
 ```java
 make && make install
 ```
+
 ### 5.回到redis目录继续编译
+
 ```java
 make MALLOC=/usr/local/jemalloc/lib
 ```
 	
 ### 6.继续redis安装
+
 ```java
 cd src
 make install PREFIX=/usr/local/redis-5.0.0/
 ```
 	
 ### 7.make test
+
 	然后会报错，需要安装tcl
 ```java
 yum -y install tcl
 ```	
 
 ## redis 启动
+
 	复制redis.conf文件到/usr/local/redis-5.0.0/bin
 	修改redis.conf 配置
 	vi /etc/redis.conf 
