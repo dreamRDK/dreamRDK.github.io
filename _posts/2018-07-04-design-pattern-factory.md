@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '(1)23种设计模式之工厂模式'
+title: '(1) 23种设计模式之工厂模式'
 subtitle: '工厂模式简介及实现方式'
 date: 2018-07-04
 categories: 技术

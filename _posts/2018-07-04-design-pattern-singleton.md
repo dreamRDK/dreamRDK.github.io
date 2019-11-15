@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '(2)23种设计模式之单例模式'
+title: '(2) 23种设计模式之单例模式'
 subtitle: '单例模式简介及实现方式'
 date: 2018-07-04
 categories: 技术

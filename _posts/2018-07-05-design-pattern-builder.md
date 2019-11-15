@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '设计模式之建造模式'
+title: '(4) 23种设计模式之建造模式'
 subtitle: '建造模式简介及实现方式'
 date: 2018-07-05
 categories: 技术
@@ -38,7 +38,7 @@ public abstract class Builder {
   // 获取组装好的电脑
   public abstract Computer getComputer();
 }
-```  
+```
 
 ### 2. Director 指挥Builder 按一定顺序完成操作
 ```java
@@ -54,7 +54,7 @@ public class Director {
     return builder.getComputer;
     }
 }
-```  
+```
 
 ### 3. Product产品类Computer
 ```java
@@ -75,7 +75,7 @@ public class Computer {
         this.mRam = mRam;
     }
 }
-```  
+```
 
 ### 4.Builder具体实现类ConcreteBuilder
 ```java
@@ -101,14 +101,14 @@ public class MyComputerBuilder extends Builder {
         return mComputer;
     }
 }
-```  
+```
 
 ### 5. 实际调用
 ```java
 Builder mBuilder = new MyComputerBuilder();
 Direcror mDirecror=new Direcror(mBuilder);
 Computor c = mDirecror.CreateComputer("i7","Intel主板","mRam");
-```  
+```
 
 ## 3.优缺点
 **优点:**
