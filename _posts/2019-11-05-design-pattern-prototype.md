@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '(3)26种设计模式之原型模式'
+title: '(3) 23种设计模式之原型模式'
 subtitle: '原型模式简介及实现方式'
 date: 2019-11-05
 categories: 技术
