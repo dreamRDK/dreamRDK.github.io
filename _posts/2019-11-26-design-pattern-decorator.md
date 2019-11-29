@@ -23,7 +23,9 @@ tags: java 设计模式
 2. 被装饰类：实现基础接口，完成基础功能
 3. 抽象装饰类：定义装饰类的变量和方法
 4. 装饰类：继承抽象装饰类，添加具体实现。
-## 2.具体代码实现
+
+## 2. 具体代码实现
+
 1.创建一个实体类实现Cloneable接口
  奶茶接口
 ```java
@@ -32,14 +34,15 @@ public interface MilkTea {
 }
 ```
  原味奶茶实现奶茶接口
+ 
 ```java
 public class OriginalMilkTea implements MilkTea{
     public String getName(){
         return "原味奶茶";
     }
-
 }
 ```
+
  奶茶抽象装饰类
 ```java
 public abstract class MilkTeaDecorator implements MilkTea{
@@ -100,7 +103,7 @@ public class UserDemo{
     }
 }
 ```
-## 3.优缺点
+## 3. 优缺点
 
 优点： 装饰类和被装饰类可以独立发展，不会相互耦合，装饰模式是继承的一个替代模式，装饰模式可以动态扩展一个实现类的功能。
 比继承更加灵活，符合开闭原则
